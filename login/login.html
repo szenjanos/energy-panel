@@ -1,0 +1,22 @@
+<div ng-controller="LoginCtrl" layout="column" layout-align="center center" layout-fill>
+    <img src="assets/logo.jpg" class="logo">
+    <div class="loginPanel md-whiteframe-z1" layout="column">
+        <md-toolbar layout="row">
+            <div class="md-toolbar-tools">
+                <h2>Authentication</h2> </div>
+        </md-toolbar>
+        <md-content class="md-padding" layout="column">
+            <form role="form" name="loginForm" novalidate="">
+                <md-input-container class="md-block">
+                    <label>Email</label>
+                    <input type="text" name="email" autocomplete="email" ng-model="user.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" required> 
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Password</label>
+                    <input type="password" name="password" autocomplete="password" ng-model="user.password" required> 
+                </md-input-container>
+                <md-button type="submit" ng-disabled="loginForm.$invalid" ng-click="signIn()" class="md-raised md-primary"> Login </md-button>
+            </form>
+        </md-content>
+    </div>
+</div>

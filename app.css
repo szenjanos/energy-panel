@@ -1,0 +1,149 @@
+/* app css stylesheet */
+
+body {
+    background-color: #ffffff;
+}
+
+.logo {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    -webkit-animation: Fade-Enter-Anime 1s;
+    -moz-animation: Fade-Enter-Anime 1s;
+    animation: Fade-Enter-Anime 1s;
+}
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li + li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.loginPanel {
+    width: 450px;
+    -webkit-animation: Fade-Enter-Anime 3s;
+    -moz-animation: Fade-Enter-Anime 3s;
+    animation: Fade-Enter-Anime 3s;
+}
+
+.addPanel {
+    width: 450px;
+}
+
+.content-wrapper {
+    max-width: 1170px;
+    padding: 15px;
+    margin: auto;
+}
+
+.content-container {
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+.valueCell {
+    width: 25%;
+}
+
+.dateCell {
+    width: 35%;
+}
+
+.buttonCell {
+    width: 15%;
+}
+
+#readignsTable>tbody>tr:last-child td {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.listFade.ng-enter {
+    -webkit-animation: Fade-Enter-Anime 0.7s;
+    -moz-animation: Fade-Enter-Anime 0.7s;
+    animation: Fade-Enter-Anime 0.7s;
+}
+
+.viewFade.ng-enter {
+    -webkit-animation: Fade-Enter-Anime 0.4s;
+    -moz-animation: Fade-Enter-Anime 0.4s;
+    animation: Fade-Enter-Anime 0.4s;
+}
+
+.Content-Fade-Leave {
+    -webkit-animation: Fade-Leave-Anime 0.4s;
+    -moz-animation: Fade-Leave-Anime 0.4s;
+    animation: Fade-Leave-Anime 0.4s;
+}
+
+@keyframes Fade-Enter-Anime {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes Fade-Leave-Anime {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes Fade-Enter-Anime {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes Fade-Leave-Anime {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes Fade-Enter-Anime {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes Fade-Leave-Anime {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,24 @@
+<div ng-controller="AddCtrl" layout="column" layout-align="center center" layout-fill>
+    <div class="addPanel" layout="column">
+        <md-card>
+            <md-toolbar class="md-table-toolbar md-secondary">
+                <div class="md-toolbar-tools"> <span>Add a new reading</span> </div>
+            </md-toolbar>
+        <md-content class="md-padding" layout="column">
+            <form role="form" name="addForm" novalidate="">
+                <md-input-container class="md-block">
+                    <label>Enter your current reading</label>
+                    <input type="number" name="value" ng-model="reading.value" min="{{$root.lastReading.value}}" required> 
+                    <div ng-messages="addForm.value.$error" role="alert">
+                      <div ng-message="required">Please enter a value for this field.</div>
+                      <div ng-message="type">Please enter numbers only.</div>
+                      <div ng-message="min">Your reading cannot be lower than your last reading: {{$root.lastReading.value}}.</div>  
+                    </div>
+                </md-input-container>
+    
+                <md-button type="submit" ng-disabled="addForm.$invalid" ng-click="addReading()" class="md-raised md-primary"> Submit </md-button>
+            </form>
+        </md-content>
+        </md-card>    
+    </div>
+</div>
